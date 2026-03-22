@@ -22,14 +22,14 @@ All modes are mutually exclusive. Multiple targets can be passed to a single mod
 
 | Flag | Description |
 |---|---|
-| `-p`, `--percent` | Target brightness as a percentage (default: 58.0) |
+| `-p`, `--percent` | Target brightness as a percentage |
 | `-cv`, `--rgb` | Target brightness as an 8-bit full range RGB value (0–255) |
 | `-n`, `--nits` | Target brightness in nits |
 | `-h`, `--hdr` | Convert SDR BT.709 to HDR BT.2020 PQ. Optional nits target (default: 203) |
 | `-r`, `--ref` | Match the peak brightness of a reference `.sup` file |
 | `-c`, `--lut` | Apply a 17, 33, or 65 point `.cube` 3D LUT |
 
-If no mode is specified and no other flags are active, supconvert defaults to `-p 58`. The HDR pipeline follows the SDR to HDR conversion formula outlined in BT.2408 §5.1.2.
+If no mode or other flags are specified, supconvert defaults to tonemapping at 58%. The HDR pipeline follows the SDR to HDR conversion formula outlined in BT.2408 §5.1.2.
 
 ## Gamma
 
