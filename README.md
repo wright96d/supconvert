@@ -23,7 +23,7 @@ All modes are mutually exclusive. Multiple targets can be passed to a single mod
 | Flag | Description |
 |---|---|
 | `-p`, `--percent` | Target brightness as a percentage |
-| `-cv`, `--rgb` | Target brightness as an 8-bit RGB value |
+| `-cv`, `--rgb` | Target brightness as an 8-bit RGB code value |
 | `-n`, `--nits` | Target brightness in nits |
 | `-h`, `--hdr` | Convert SDR BT.709 to HDR BT.2020 PQ. Optional nits target (default: 203) |
 | `-r`, `--ref` | Match the peak brightness of a reference `.sup` file |
