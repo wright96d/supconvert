@@ -89,6 +89,6 @@ supconvert input.sup -r reference.sup
 # Apply a LUT to all .sup files in a folder
 supconvert /path/to/folder -c my_lut.cube
 ```
-##AI Notice
+## AI Notice
 
 Created using Gemini, Claude, and ChatGPT
