@@ -29,7 +29,7 @@ All modes are mutually exclusive. Multiple targets can be passed to a single mod
 | `-r`, `--ref` | Match the peak brightness of a reference `.sup` file |
 | `-c`, `--lut` | Apply a 17, 33, or 65 point `.cube` 3D LUT |
 
-If no mode or other flags are specified, supconvert defaults to tonemapping at 58%. The HDR pipeline follows the SDR to HDR conversion formula outlined in BT.2408 §5.1.2.
+If no mode or other flags are specified, supconvert defaults to tonemapping at 58%. All tonemapping modes display brightness in nits under 65%. (--nits overrides threshold) The HDR pipeline follows the SDR to HDR conversion formula outlined in BT.2408 §5.1.2.
 
 ## Gamma
 
