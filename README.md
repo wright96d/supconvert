@@ -18,7 +18,7 @@ Output is auto-named if omitted. Input can be a single `.sup` file or a folder o
 
 ## Tonemapping Modes
 
-Multiple targets can be passed to a single mode to produce multiple outputs in one run.
+All modes are mutually exclusive. Multiple targets can be passed to a single mode to produce multiple outputs in one run.
 
 | Flag | Description |
 |---|---|
@@ -29,11 +29,11 @@ Multiple targets can be passed to a single mode to produce multiple outputs in o
 | `-r`, `--ref` | Match the peak brightness of a reference `.sup` file |
 | `-c`, `--lut` | Apply a 17, 33, or 65 point `.cube` 3D LUT |
 
-If no mode is specified and no other flags are active, supconvert defaults to `-p 58` (~200nits HDR).
+If no mode is specified and no other flags are active, supconvert defaults to `-p 58`. The HDR pipeline follows the SDR to HDR conversion formula outlined in BT.2408 §5.1.2.
 
 ## Gamma
 
-Combinable with any tonemapping mode.
+Mutually exclusive with each other, combinable with any tonemapping mode.
 
 | Flag | Description |
 |---|---|
@@ -44,11 +44,11 @@ Combinable with any tonemapping mode.
 
 | Flag | Description |
 |---|---|
-| `-x`, `--xml` | Export to BDN XML + PNG image sequence. FPS is auto-detected but can be overridden |
+| `-x`, `--xml` | Export to BDN XML + PNG image sequence |
 | `-1`, `--first` | Export only the first graphic as a PNG |
 | `-f`, `--force` | Skip overwrite warnings |
 
-`-x` and `-1` are mutually exclusive. Both can be combined with a tonemapping mode to process then export in one pass. Manually providing an output path with a `.xml` extension implicitly triggers `-x`.
+`-x` and `-1` are mutually exclusive. Both can be combined with a tonemapping mode to process then export in one pass. FPS is auto-detected from subtitle timing but can be overridden by passing a value to `-x`. A warning is shown if palette animations (e.g. fades) are detected, as BDN XML does not support them. Manually providing an output path with an `.xml` extension implicitly triggers `-x`.
 
 ## Verbosity
 
@@ -59,6 +59,8 @@ Combinable with any tonemapping mode.
 | `-v`, `--verbose` | Like `--log` but printed to the CLI. Can be combined with `--log` |
 | `-q`, `--quiet` | Suppress all output except the progress bar and warnings |
 | `-s`, `--silent` | Suppress all output except warnings |
+
+Due to the coarseness of the limited range Y codespace, multiple targets can round to the same displayed percentage — `--exact` makes those distinctions visible.
 
 ## Examples
 
@@ -90,8 +92,3 @@ supconvert /path/to/folder -c my_lut.cube
 # Match brightness of a reference file
 supconvert input.sup -r reference.sup
 ```
-
-## Notes
-
-- The HDR pipeline follows the SDR to HDR conversion formula outlined in BT.2408 §5.1.2.
-- BDN XML export auto-detects framerate from subtitle timing. A warning is shown if palette animations (e.g. fades) are detected, as BDN XML does not support them.
