@@ -18,7 +18,7 @@ Output is auto-named if omitted. Input can be a single `.sup` file or a folder o
 
 ## Tonemapping Modes
 
-All modes are mutually exclusive. Multiple targets can be passed to a single mode to produce multiple outputs in one run.
+Multiple targets can be passed to a single mode to produce multiple outputs in one run.
 
 | Flag | Description |
 |---|---|
@@ -33,7 +33,7 @@ If no mode is specified and no other flags are active, supconvert defaults to `-
 
 ## Gamma
 
-Mutually exclusive with each other, combinable with any tonemapping mode.
+Combinable with any tonemapping mode.
 
 | Flag | Description |
 |---|---|
