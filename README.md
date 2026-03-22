@@ -83,9 +83,8 @@ supconvert input.sup -p 60 -x
 # Tonemap then export first graphic
 supconvert input.sup -p 60 --first
 
-# Apply a LUT to all .sup files in a folder
-supconvert /path/to/folder -c my_lut.cube
-
 # Match brightness of a reference file
 supconvert input.sup -r reference.sup
-```
+
+# Apply a LUT to all .sup files in a folder
+supconvert /path/to/folder -c my_lut.cube
