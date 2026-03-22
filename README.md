@@ -1,6 +1,6 @@
 # supconvert
 
-Brightness tonemapping, gamma adjustment, SDR to HDR conversion, and BDN XML export for PGS (`.sup`) subtitles.
+Tonemapping and BDN XML export for PGS (`.sup`) subtitles.
 
 ## Requirements
 
