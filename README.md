@@ -60,7 +60,7 @@ Mutually exclusive with each other, combinable with any tonemapping mode.
 | `-q`, `--quiet` | Suppress all output except the progress bar and warnings |
 | `-s`, `--silent` | Suppress all output except warnings |
 
-Due to the coarseness of the limited range Y codespace, multiple targets can round to the same displayed percentage — `--exact` makes those distinctions visible.
+Due to the coarseness of the 16-235 limited range, multiple targets can round to the same displayed percentage — `--exact` makes those distinctions visible.
 
 ## Examples
 
@@ -82,9 +82,6 @@ supconvert input.sup -p 60 -x
 
 # Tonemap then export first graphic
 supconvert input.sup -p 60 --first
-
-# SDR to HDR at 203 nits, with gamma
-supconvert input.sup -h 203 -g 1.2
 
 # Apply a LUT to all .sup files in a folder
 supconvert /path/to/folder -c my_lut.cube
