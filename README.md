@@ -29,7 +29,7 @@ Multiple targets can be passed to a single mode to produce multiple outputs in o
 | `-r`, `--ref` | Match the peak brightness of a reference `.sup` file |
 | `-c`, `--lut` | Apply a 17, 33, or 65 point `.cube` 3D LUT |
 
-If no mode is specified and no other flags are active, supconvert defaults to `-p 58`.
+If no mode is specified and no other flags are active, supconvert defaults to `-p 58` (~200nits HDR).
 
 ## Gamma
 
