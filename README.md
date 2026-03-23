@@ -60,8 +60,6 @@ Combinable with any tonemapping mode.
 | `-q`, `--quiet` | Suppress all output except the progress bar and warnings |
 | `-s`, `--silent` | Suppress all output except warnings |
 
-Due to the coarseness of the 16-235 limited range, multiple targets can round to the same displayed percentage. `--exact` makes those distinctions visible.
-
 ## Examples
 
 ```bash
