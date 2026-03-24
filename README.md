@@ -38,7 +38,7 @@ Combinable with any tonemapping mode.
 | Flag | Description |
 |---|---|
 | `-g`, `--gamma` | Apply manual gamma correction. Below 1.0 darkens, above 1.0 brightens |
-| `-tb`, `--true-black` | Auto-calculates gamma to push grey outlines toward true black (default strength: 0.8) |
+| `-tb`, `--true-black` | Auto-calculates gamma to push grey outlines closer to black (default strength: 0.8) |
 
 ## Options
 
