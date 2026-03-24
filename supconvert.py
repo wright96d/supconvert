@@ -319,7 +319,7 @@ def process_sup_file(input_path, output_arg, mode, target_val, gamma, true_black
         target_cv = orig_target_cv
         compliant_percent = (target_cv - 16) / 219.0 * 100.0
 
-        hide_nits = (compliant_percent > 65.0) and (mode != 'nits')
+        hide_nits = (compliant_percent > 68.0) and (mode != 'nits')
         perc_fmt  = "" if precise else ".0f"
         nits_fmt  = lambda n: f"{n} nits" if n < 1 else f"{n:.0f} nits"
         t_perc  = f"{compliant_percent:{perc_fmt}}%"
