@@ -728,7 +728,7 @@ class CleanHelpFormatter(argparse.RawDescriptionHelpFormatter):
 
 def main():
     p = argparse.ArgumentParser(
-        description="Brightness tonemapping, gamma adjustment, SDR to HDR conversion, and xml export for PGS subtitles.",
+        description="Tonemapping and BDN XML export for PGS subtitles.",
         add_help=False, formatter_class=CleanHelpFormatter,
         usage="%(prog)s \033[92m[input]\033[0m \033[92m[output]\033[0m \033[94m[MODES ...]\033[0m \033[94m[GAMMA ...]\033[0m \033[94m[OPTIONS ...]\033[0m \033[94m[VERBOSITY ...]\033[0m",
         epilog="examples:\n  supconvert input.sup                           tonemap to default 58%\n  supconvert input.sup --rgb 148 200 -tb         multiple RGB targets with true-black\n  supconvert input.sup -g 0.8                    gamma only\n  supconvert input.sup -x                        export to BDN XML\n  supconvert input.sup -p 60 -x                  tonemap then export to BDN XML\n  supconvert input.sup -p 60 --first             tonemap then export first graphic\n  supconvert input.sup -r reference.sup          match brightness of a reference file\n  supconvert /path/to/folder -c my_lut.cube      apply a LUT to all .sup files in a folder"
