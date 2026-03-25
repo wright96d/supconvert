@@ -25,7 +25,7 @@ Multiple targets can be passed to a single mode to produce multiple outputs in o
 | `-p`, `--percent` | Target brightness as a percentage |
 | `-cv`, `--rgb` | Target brightness as an 8-bit RGB code value |
 | `-n`, `--nits` | Target brightness in nits |
-| `-h`, `--hdr` | Convert SDR BT.709 to HDR BT.2020 PQ. Optional nits target (default: 203) |
+| `-h`, `--hdr` | Convert BT.709 SDR to BT.2020 HDR. Optional nits target (default: 203) |
 | `-r`, `--ref` | Match the peak brightness of a reference `.sup` file |
 | `-c`, `--lut` | Apply a 17, 33, or 65 point `.cube` 3D LUT |
 
